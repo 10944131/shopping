@@ -47,6 +47,12 @@ var app = new Vue({
         }
     },
     computed:{
-        
+        totalPrice:function(){
+          var totalPrice=0;
+          for(let i=0;i<this.itemList.length;i++){
+            totalPrice+=this.itemList[i].price*this.itemList[i].count;
+          }
+          return totalPrice;
+        }
     }
 })
